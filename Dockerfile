@@ -5,8 +5,8 @@ MAINTAINER Martin Venuš <martin.venus@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM dumb
 
-RUN echo "deb http://nginx.org/packages/debian/ stretch nginx" > /etc/apt/sources.list.d/nginx \
-    && echo "deb-src http://nginx.org/packages/debian/ stretch nginx" >> /etc/apt/sources.list.d/nginx
+RUN echo "deb http://nginx.org/packages/debian/ stretch nginx" > /etc/apt/sources.list.d/nginx.list \
+    && echo "deb-src http://nginx.org/packages/debian/ stretch nginx" >> /etc/apt/sources.list.d/nginx.list
 
 RUN apt-get update \
 	&& apt-get -y install nginx \
